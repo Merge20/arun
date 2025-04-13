@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-image:url(donation6.jpeg);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #d6937b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  background-color: white;
+  color: #d6937b;
+}
+
+.body {
+  padding: 6rem 2rem;
+  text-align: left;
+  color: #003366;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.85);
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.content h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.signup-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #f28d75;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #dd745c;
+}
+
+.info-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background-color: #fff0ed;
+}
+
+.box {
+  background-color: #ffd5c8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.pledge-box {
+  background-color: #f2a18c;
+  color: white;
+}
+
+.pledge-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #f28d75;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pledge-btn:hover {
+  background-color: #fce3db;
+}
+.circle-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px auto;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+#footer{
+  text-align: center;
+  text-decoration: darksalmon;
+  font-size: larger;
+  color:floralwhite;
+  background-color: black;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  color: white;
+  font-weight: 500;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: #d6937b;
+}
+
+/* Adjust navbar for the new elements */
+.navbar {
+  padding: 1rem 1.5rem; /* Slightly reduced padding to accommodate new elements */
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.account-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.account-icon:hover {
+  transform: scale(1.1);
+}
+
+.username {
+  color: white;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: #d6937b;
+}
+
+/* Make sure navbar has enough padding */
+.navbar {
+  padding: 1rem 2rem;
+}
