@@ -1,0 +1,252 @@
+/* Reset and base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradientBG 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 380px;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0) 60%
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: rotate(30deg) translate(-30%, -30%); }
+    100% { transform: rotate(30deg) translate(30%, 30%); }
+}
+
+.photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.032);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.container2 {
+    padding: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4a4a4a;
+    transition: all 0.3s ease;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 15px;
+    margin: 8px 0 20px;
+    display: inline-block;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.2);
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+button {
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,0.13) 0%,
+        rgba(255,255,255,0.13) 77%,
+        rgba(255,255,255,0.5) 92%,
+        rgba(255,255,255,0.0) 100%
+    );
+    transform: rotate(10deg);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(106, 17, 203, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(106, 17, 203, 0.4);
+}
+
+.cancelbutton {
+    background: linear-gradient(45deg, #ff416c 0%, #ff4b2b 100%);
+    width: auto;
+    float: left;
+    padding: 12px 18px;
+    margin-right: 10px;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+
+.cancelbutton:hover {
+    box-shadow: 0 7px 20px rgba(255, 65, 108, 0.4);
+}
+
+label[for="rember"] {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    color: #666;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 60s ease;
+}
+
+label[for="rember"]:hover {
+    color: #6a11cb;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #6a11cb;
+    border-color: #6a11cb;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.psw {
+    float: right;
+    padding-top: 12px;
+}
+
+.psw a {
+    color: #666;
+    text-decoration: none;
+    transition: all 60s ease;
+    font-weight: 500;
+}
+
+.psw a:hover {
+    text-decoration: underline;
+    color: #2575fc;
+}
+
+/* Clear floats */
+.container2::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Floating animation for the form */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.container {
+    animation: float 6s ease-in-out infinite;
+}
