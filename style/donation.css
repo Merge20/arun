@@ -168,9 +168,9 @@ body{
   color: #d6937b;
 }
 
-/* Adjust navbar for the new elements */
+
 .navbar {
-  padding: 1rem 1.5rem; /* Slightly reduced padding to accommodate new elements */
+  padding: 1rem 1.5rem;
 }
 
 .user-section {
@@ -213,12 +213,10 @@ body{
   color: #d6937b;
 }
 
-/* Make sure navbar has enough padding */
 .navbar {
   padding: 1rem 2rem;
 }
 
-/* Donor Counter Styles */
 .nav-links a.donors-link {
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
@@ -235,7 +233,6 @@ body{
   margin-left: 3px;
 }
 
-/* Active state for donor link */
 .nav-links a.donors-link.active {
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);

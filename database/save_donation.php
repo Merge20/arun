@@ -9,13 +9,11 @@ if (!isset($_SESSION['name'])) {
     exit();
 }
 
-// Database connection
 $conn = new mysqli("localhost", "root", "", "donation");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Process and validate data
 $full_name = $_POST['full_name'] ?? '';
 $dob = $_POST['dob'] ?? '';
 $gender = $_POST['gender'] ?? '';

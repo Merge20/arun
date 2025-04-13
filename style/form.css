@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #fff0ed; /* Soft background to match site theme */
+    background-color: #fff0ed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
-    border-top: 6px solid #f28d75; /* Accent bar */
+    border-top: 6px solid #f28d75;
   }
   
   h2 {
@@ -73,3 +73,33 @@ body {
   .bottom-text a:hover {
     text-decoration: underline;
   }
+
+  .error-message {
+    color: #d32f2f;
+    background-color: #fde8e8;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-left: 4px solid #d32f2f;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #fde8e8;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-left: 4px solid #d32f2f;
+}
+
+.success-message {
+  color: #2e7d32;
+  background-color: #edf7ed;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-left: 4px solid #2e7d32;
+}

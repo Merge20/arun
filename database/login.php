@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-
     $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
 
@@ -17,7 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../home.php");
         exit();
     } else {
-        echo "Invalid email or password!";
+        $_SESSION['error'] = "Invalid email or password!";
+        header("Location: ../index.php");
+        exit();
     }
 }
 ?>

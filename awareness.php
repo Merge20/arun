@@ -5,10 +5,8 @@ if (!isset($_SESSION['name'])) {
     exit();
 }
 
-// Database connection
 require_once('./database/config.php');
 
-// Get donor count
 $query = "SELECT COUNT(*) as donor_count FROM donors";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);

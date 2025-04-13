@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: lightpink;
+  color: #333;
+}
+
+.navbar {
+  background-color: #d6937b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  background-color: white;
+  color: #d6937b;
+}
+
+.awareness-section {
+  padding: 60px 20px;
+  background-color: #e9edc9;
+  color: #333;
+}
+
+.awareness-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.awareness-section h1 {
+  font-size: 2.5rem;
+  color: #0a1045;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.awareness-section h2 {
+  font-size: 2rem;
+  color: #d6937b;
+  margin: 40px 0 20px;
+}
+
+.awareness-section p,
+.awareness-section li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.awareness-section ul,
+.awareness-section ol {
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.awareness-section a {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #d6937b;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.awareness-section a:hover {
+  background-color: #b86e5f;
+}
+
+.awareness-section img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.account-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.account-icon:hover {
+  transform: scale(1.1);
+}
+
+.username {
+  color: white;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: #d6937b;
+}
+
+/* Make sure navbar has enough padding */
+.navbar {
+  padding: 1rem 2rem;
+}
+
+.nav-links a.donors-link {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a.donors-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-links a.donors-link #donor-number {
+  font-weight: 700;
+  margin-left: 3px;
+}
+
+/* Active state for donor link */
+.nav-links a.donors-link.active {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+}

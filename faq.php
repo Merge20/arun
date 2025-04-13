@@ -122,7 +122,6 @@ $donorCount = $row['donor_count'];
     </div>
     
     <script>
-    // Auto-refresh donor count every 60 seconds
     function updateDonorCount() {
         fetch('./database/get_donor_count.php')
             .then(response => response.text())
@@ -131,7 +130,6 @@ $donorCount = $row['donor_count'];
             });
     }
 
-    // Update on page load and every 60 seconds
     updateDonorCount();
     setInterval(updateDonorCount, 60000);
     </script>

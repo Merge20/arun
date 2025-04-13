@@ -147,14 +147,12 @@ if (!isset($_SESSION['name'])) {
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Show modal if success
         if (window.location.search.includes('success=true')) {
             document.getElementById("confirmation-modal").style.display = "block";
             
             // Clear the form
             document.getElementById("donation-form").reset();
             
-            // Remove the success parameter from URL
             history.replaceState({}, document.title, window.location.pathname);
         }
         
@@ -164,7 +162,6 @@ if (!isset($_SESSION['name'])) {
             const errorMsg = urlParams.get('error');
             alert("Error: " + errorMsg);
             
-            // Remove the error parameter from URL
             history.replaceState({}, document.title, window.location.pathname);
         }
         
@@ -177,7 +174,6 @@ if (!isset($_SESSION['name'])) {
             document.getElementById("confirmation-modal").style.display = "none";
         });
         
-        // "All organs" checkbox functionality
         document.getElementById("all-organs").addEventListener("change", function() {
             const checkboxes = document.querySelectorAll('input[name="organs"]:not(#all-organs)');
             checkboxes.forEach(checkbox => {
@@ -185,13 +181,11 @@ if (!isset($_SESSION['name'])) {
             });
         });
         
-        // Reset form button
         document.querySelector(".btn-reset").addEventListener("click", function() {
             document.getElementById("donation-form").reset();
         });
     });
 
-    // Handle "All organs" checkbox
     document.getElementById('all-organs').addEventListener('change', function() {
         const checkboxes = document.querySelectorAll('input[name="organs[]"]:not(#all-organs)');
         checkboxes.forEach(checkbox => {

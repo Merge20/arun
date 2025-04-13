@@ -5,10 +5,8 @@ if (!isset($_SESSION['name'])) {
     exit();
 }
 
-// Database connection
 require_once('./database/config.php');
 
-// Get donor count
 $query = "SELECT COUNT(*) as donor_count FROM donors";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
@@ -74,7 +72,6 @@ $donorCount = $row['donor_count'];
   <p id="footer">-----designed by ---------Arunkumar----------- ashishkumar---------------- ashishranjan--------</p>
 
   <script>
-// Auto-refresh donor count every 60 seconds
 function updateDonorCount() {
     fetch('./database/get_donor_count.php')
         .then(response => response.text())
@@ -83,7 +80,6 @@ function updateDonorCount() {
         });
 }
 
-// Update on page load and every 60 seconds
 updateDonorCount();
 setInterval(updateDonorCount, 60000);
 </script>
