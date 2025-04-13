@@ -4,8 +4,16 @@ if (!isset($_SESSION['name'])) {
     header("Location: ./database/login.php");
     exit();
 }
-?>
 
+// Database connection
+require_once('./database/config.php');
+
+// Get donor count
+$query = "SELECT COUNT(*) as donor_count FROM donors";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
+$donorCount = $row['donor_count'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +32,7 @@ if (!isset($_SESSION['name'])) {
       <a href="/dregistration.php">Donate now</a>
       <a href="/faq.php">FAQs</a>
       <a class="active" href="/awareness.php">Awareness</a>
-      <a href="#">Donor's</a>
+      <a href="#" class="donors-link" id="donors-count">Donors (<span id="donor-number"><?php echo $donorCount; ?></span>)</a>
     </nav>
     <div class="user-section">
       <svg class="account-icon" viewBox="0 0 24 24" width="24" height="24">

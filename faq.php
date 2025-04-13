@@ -4,6 +4,13 @@ if (!isset($_SESSION['name'])) {
     header("Location: ./database/login.php");
     exit();
 }
+
+require_once('./database/config.php');
+
+$query = "SELECT COUNT(*) as donor_count FROM donors";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
+$donorCount = $row['donor_count'];
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +30,7 @@ if (!isset($_SESSION['name'])) {
           <a href="/dregistration.php">Donate now</a>
           <a class="active" href="/faq.php">FAQs</a>
           <a href="/awareness.php">Awareness</a>
-          <a href="#">Donor's</a>
+          <a href="#" class="donors-link" id="donors-count">Donors (<span id="donor-number">0</span>)</a>
         </nav>
         <div class="user-section">
           <svg class="account-icon" viewBox="0 0 24 24" width="24" height="24">
@@ -113,5 +120,20 @@ if (!isset($_SESSION['name'])) {
             </div>
         </div>
     </div>
+    
+    <script>
+    // Auto-refresh donor count every 60 seconds
+    function updateDonorCount() {
+        fetch('./database/get_donor_count.php')
+            .then(response => response.text())
+            .then(count => {
+                document.getElementById('donor-number').textContent = count;
+            });
+    }
+
+    // Update on page load and every 60 seconds
+    updateDonorCount();
+    setInterval(updateDonorCount, 60000);
+    </script>
 </body>
 </html>

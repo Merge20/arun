@@ -167,3 +167,25 @@ body {
   .navbar {
     padding: 1rem 2rem;
   }
+
+  .nav-links a.donors-link {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.donors-link:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-links a.donors-link #donor-number {
+    font-weight: 700;
+    margin-left: 3px;
+}
+
+/* Active state for donor link */
+.nav-links a.donors-link.active {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+}

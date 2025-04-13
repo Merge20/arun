@@ -116,7 +116,6 @@ if (!isset($_SESSION['name'])) {
                             <option value="">Select</option>
                             <option value="living">Living Donation (e.g., kidney, liver lobe)</option>
                             <option value="deceased">Deceased Donation (after death)</option>
-                            <option value="both">Both</option>
                         </select>
                     </div>
 
